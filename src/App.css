@@ -52,8 +52,8 @@ input:focus {
 }
 
 table {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
   width: 60%;
   border: #61dafb;
   text-align: center;
@@ -67,6 +67,13 @@ table {
   margin: auto;
   font-size: 30px;
   text-align: center;
+}
+
+.Student-pad {
+  background-color: white;
+  padding: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 th {
