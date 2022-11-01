@@ -3,9 +3,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 function DonorsList ({student}){
   const [donorForm, setDonorForm] = useState({
-    first_name: String,
-    last_name: String,
-    donation: Number,
+    first_name: '',
+    last_name: '',
+    donation: '',
     donation_received: false,
     student_id: student.id
   })
@@ -13,6 +13,10 @@ function DonorsList ({student}){
   const donors = student.donors;
 
   // console.log(student.id)
+
+  if(student.donors === undefined){
+    return null
+  }else{
 
   return(
     <div className='Background'>
@@ -42,7 +46,7 @@ function DonorsList ({student}){
             </tbody>
         </table>
     </div>
-  )
+  )}
 
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function StudentForm (){
+function StudentForm ({handleStudSubmit}){
   const [studentForm, setStudentForm] = useState({
     first_name: '',
     last_name: '',
@@ -27,11 +27,11 @@ function StudentForm (){
     })
     .then(r => r.json())
     .then(stud => {
-      // studentSubmit(stud);
+      handleStudSubmit(stud);
       setStudentForm({
         first_name: '',
         last_name: '',
-        age: 0
+        age: ''
       })
     })
     

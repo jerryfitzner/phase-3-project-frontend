@@ -16,11 +16,15 @@ function App() {
 
   // console.log(students)
 
+  const handleStudSubmit = (stud) => {
+    setStudents([...students, stud])
+  }
+
 
   return (
     <div>
       <Header />
-      <StudentForm />
+      <StudentForm handleStudSubmit={handleStudSubmit}/>
       <Student students={students}/>
     </div>
   )
