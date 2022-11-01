@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import DonateForm from "./DonateForm";
 import DonorsList from "./DonorsList";
 import { v4 as uuidv4 } from 'uuid';
 
@@ -25,7 +24,6 @@ function Student ({students}){
            </thead>
           </table>
         </div>
-        <DonateForm student={student.id}/>
         <DonorsList student={student}/>
         </div>
       ))}
