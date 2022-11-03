@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from 'uuid';
 import DonateForm from "./DonateForm";
+import Donor from "./Donor";
 
 function DonorsList ({student}){
   const [donors, setDonors] = useState(student.donors);
@@ -16,9 +16,12 @@ function DonorsList ({student}){
     setDonors([...donors, donor])
   }
 
-  if(student.donors === undefined){
-    return null
-  }else{
+  const onDeleteDonor = (id) => {
+    const updatedDonors = donors.filter(donor => donor.id !== id);
+    setDonors(updatedDonors);
+  }
+
+  
 
   return(
     <div>
@@ -36,22 +39,13 @@ function DonorsList ({student}){
               </thead>
               <tbody>
                 {donors.map((donor) => (
-                  <tr key={uuidv4()}>
-                    <td>{donor.first_name} {donor.last_name}</td>
-                    <td>${donor.donation}</td>
-                    <td>
-                      <button className='Button2'>Yes/No</button>
-                    </td>
-                    <td>
-                      <button className='Delete-button'>X</button>
-                    </td>
-                  </tr>
+                  <Donor donor={donor} onDeleteDonor={onDeleteDonor}/>
                 ))}
               </tbody>
           </table>
       </div>
     </div>
-  )}
+  )
 
 }
 
