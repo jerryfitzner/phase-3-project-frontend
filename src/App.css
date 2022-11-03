@@ -125,8 +125,20 @@ tr:nth-child(even) {
   border-radius: 8px;
 }
 
+.Button3 {
+  background-color: #282c34; 
+  border: white;
+  color: rgba(215, 8, 8, 0.883);
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
 .Delete-button {
-  background-color: rgba(215, 8, 8, 0.883); /* Green */
+  background-color: rgba(215, 8, 8, 0.883); 
   border: white;
   color: #282c34;
   padding: 5px 7px;
