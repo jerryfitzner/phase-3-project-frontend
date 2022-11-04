@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from 'uuid';
+
 
 function Donor ({donor, onDeleteDonor}) {
   const [isDonate, setIsDonate] = useState(donor.donation_received)
@@ -29,9 +29,11 @@ function Donor ({donor, onDeleteDonor}) {
     .then(data => setIsDonate(data.donation_received))
   }
 
+  
+
   return(
     
-      <tr key={uuidv4()}>
+      <tr>
         <td>{donor.first_name} {donor.last_name}</td>
         <td>${donor.donation}</td>
         <td>

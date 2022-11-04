@@ -14,18 +14,23 @@ function App() {
       .then((student) => setStudents(student))
   }, []);
 
-  // console.log(students)
+
 
   const handleStudSubmit = (stud) => {
     setStudents([...students, stud])
   }
+
+  
+  const studentList = students.map((student) => (
+    <Student student={student} />
+  ))
 
 
   return (
     <div>
       <Header />
       <StudentForm handleStudSubmit={handleStudSubmit}/>
-      <Student students={students}/>
+      {studentList}
     </div>
   )
 }
