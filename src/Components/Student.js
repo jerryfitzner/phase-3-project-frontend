@@ -9,7 +9,7 @@ function Student ({student}){
   const handleDonateClick = () => {
     setSeeDonors(!seeDonors)
   }
-   console.log(student)
+   
 
   return(
     <div>

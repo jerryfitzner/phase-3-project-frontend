@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 import '../App.css';
 import StudentForm from "./StudentForm";
 import Student from "./Student";
@@ -17,19 +18,20 @@ function App() {
 
 
   const handleStudSubmit = (stud) => {
-    setStudents([...students, stud])
+    setStudents(stud)
   }
 
   
+
   const studentList = students.map((student) => (
-    <Student student={student} />
+    <Student student={student} key={uuidv4()} />
   ))
 
 
   return (
     <div>
       <Header />
-      <StudentForm handleStudSubmit={handleStudSubmit}/>
+      <StudentForm  handleStudSubmit={handleStudSubmit} />
       {studentList}
     </div>
   )

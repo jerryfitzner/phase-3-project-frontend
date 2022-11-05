@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import DonateForm from "./DonateForm";
 import Donor from "./Donor";
@@ -31,7 +31,7 @@ function DonorsList ({student, seeDonors}){
          </tr>
        </thead>
        <tbody>
-         {donors.map((donor) => ( <Donor key={uuidv4()} donor={donor} onDeleteDonor={onDeleteDonor}/>))}
+         {donors.map((donor) => (<Donor key={uuidv4()} donor={donor} onDeleteDonor={onDeleteDonor}/>))}
        </tbody>
       </table>
   </div> 

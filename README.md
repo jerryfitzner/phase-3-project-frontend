@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# The Student Fundraising App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Student Fundraising app is a simple single page application which was built on the front end using REACT. There are many improvements which will added as time goes by. This app is designed to be paired with the sinatra/Active Record backend found here: [Backend Repo](https://github.com/jerryfitzner/phase-3-sinatra-react-project) 
 
-## Available Scripts
+## Requirements 
 
-In the project directory, you can run:
+- Fork and clone the git hub repository for both the front, and back end.
+  - [Front End](https://github.com/jerryfitzner/phase-3-project-frontend)
+  - [Back End](https://github.com/jerryfitzner/phase-3-sinatra-react-project)
 
-### `npm start`
+## Installation Insctructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Fork and clone the git hub repository, if you have not done so yet.
+- Open the Back End first:
+  - Open the terminal and run `bundle install` to install the gems. 
+  - Next run `bundle exec rake db:seed` to seed the database with data. 
+  - Lastly, run `bundle exec rake server` to start the API server.
+- Open the Front End next:
+  - Open the REACT App by typing `NPM Start` or `NPM Yarn` in the terminal.
+- The app should now be live in your browser!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Using the Student Fundraising App
 
-### `npm test`
+This single page application displays a list of students who might be attending a trip in the future. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1) Student Form
 
-### `npm run build`
+- At the top of the page, there is a form a user can use to submit a students name. This will add the students name to the list below. This is done in alphabetical order, by their first name.  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2) Each Student
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Each student has many donors. Each students donors can be found by clicking on the, "Donate Now" button next to their name. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3) Each Students Donors
 
-### `npm run eject`
+- After clicking the, "Donate Now" button, the students donors appear below their name. If there are no donors for the student, none will be listed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4) Adding a Donor
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- After clicking the, "Donate Now" button, a form appears where a new donors name and donation amount can be entered. This will add the donor below the student. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 5) Each Donor
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Each donor below a student can be updated in the following ways:
+  - Delete
+    - By clicking on the red button with an, "X" in the middle, a donor is permanently deleted. 
+  - Donation Recieved
+    - In order to track whether a donation has been recieved, a user can click on the, "Yes/No" to track whether or not a donation was recieved. 
+    - This is updated in the database, so data is never lost between users or sessions. 
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
